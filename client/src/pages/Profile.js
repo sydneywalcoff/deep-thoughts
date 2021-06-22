@@ -9,6 +9,7 @@ import Auth from '../utils/auth';
 
 import FriendList from '../components/FriendList';
 import ThoughtList from '../components/ThoughtList';
+import ThoughtForm from '../components/ThoughtForm';
 
 const Profile = () => {
   const {username: userParam } = useParams();
@@ -73,6 +74,7 @@ const Profile = () => {
             />
         </div>
       </div>
+      <div className="mb-3">{!userParam && <ThoughtForm />}</div>
     </div>
   );
 };
